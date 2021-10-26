@@ -12,7 +12,7 @@ function createBadges(limit = 50) {
     const email = faker.internet.email();
 
     result.push({
-      id: faker.random.uuid(),
+      id: faker.datatype.uuid(),
       firstName,
       lastName,
       email,
@@ -31,7 +31,7 @@ function main() {
   };
 
   fs.writeFileSync(
-    path.resolve(__dirname, 'db.json'),
+    path.resolve(__dirname, 'db1.json'),
     JSON.stringify(data, null, 4)
   );
 }
